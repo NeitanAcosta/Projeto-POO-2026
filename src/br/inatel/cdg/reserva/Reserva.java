@@ -4,7 +4,6 @@ import br.inatel.cdg.quarto.Quarto;
 
 public class Reserva {
 
-    // Atributos
     private int id;
     private Hospede hospede;
     private Quarto quarto;
@@ -14,7 +13,6 @@ public class Reserva {
     private double valorTotal;
     private String status;
 
-    // Construtor
     public Reserva(int id, Hospede hospede, Quarto quarto,String dataEntrada, String dataSaida,int quantidadeOcupantes) {
         this.id = id;
         this.hospede = hospede;
