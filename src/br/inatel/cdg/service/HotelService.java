@@ -1,5 +1,7 @@
 
 package br.inatel.cdg.service;
+import br.inatel.cdg.Exception.ReservaException;
+import br.inatel.cdg.Exception.ValidacaoException;
 import br.inatel.cdg.reserva.Reserva;
 
 public class HotelService {
@@ -12,7 +14,10 @@ public class HotelService {
         quantidadeReservas = 0;
     }
 
-    public void cadastrarReserva(Reserva reserva) {
+    public void cadastrarReserva(Reserva reserva) throws ValidacaoException {
+        if (reserva == null) {
+         throw new ValidacaoException("Reserva invalida!");
+        }
         if (quantidadeReservas < 100) {
             reservas[quantidadeReservas] = reserva;
             quantidadeReservas++;
@@ -40,7 +45,7 @@ public class HotelService {
         }
     }
 
-    public void realizarCheckIn(int id) {
+    public void realizarCheckIn(int id) throws ReservaException {
         for (int i = 0; i < quantidadeReservas; i++) {
             if (reservas[i].getId() == id) {
              switch (reservas[i].getStatus()) {
@@ -49,39 +54,35 @@ public class HotelService {
                     System.out.println("Check-in realizado com sucesso!");
                     break;
                 case "EM ESTADIA":
-                    System.out.println("O check-in ja foi realizado!");
-                    break;
+                    throw new ReservaException("O check-in ja foi realizado!");
                 case "FINALIZADA":
-                    System.out.println("Essa reserva ja foi finalizada!");
-                    break;
+                    throw new ReservaException("Essa reserva ja foi finalizada!");
                 }
             return;
             }
         }
-     System.out.println("Reserva nao encontrada!");
+     throw new ReservaException("Reserva nao encontrada!");
     }
 
-    public void realizarCheckOut(int id) {
+    public void realizarCheckOut(int id) throws ReservaException {
         for (int i = 0; i < quantidadeReservas; i++) {
             if (reservas[i].getId() == id) {
              switch (reservas[i].getStatus()) {
                 case "RESERVADA":
-                    System.out.println("O hospede ainda nao realizou o check-in!");
-                    break;
+                    throw new ReservaException("O hospede ainda nao realizou o check-in!");
 
-                case "EM_ESTADIA":
+                case "EM ESTADIA":
                     reservas[i].setStatus("FINALIZADA");
                     System.out.println("Check-out realizado com sucesso!");
                     break;
 
                 case "FINALIZADA":
-                    System.out.println("O check-out ja foi realizado!");
-                    break;
+                    throw new ReservaException("O check-out ja foi realizado!");
                 }
                 return;
             }
         }
-        System.out.println("Reserva nao encontrada!");
+        throw new ReservaException("Reserva nao encontrada!");
     }
 
     public double calcularFaturamento() {
