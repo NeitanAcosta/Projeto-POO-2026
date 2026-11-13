@@ -1,4 +1,4 @@
-package br.inatel.cdg.Exception;
+package br.inatel.cdg.persistencia;
 
 public class PersistenciaException extends RuntimeException {
 
