@@ -21,6 +21,8 @@ public class ConsoleUI {
         System.out.println("3 - Realizar check-in");
         System.out.println("4 - Realizar check-out");
         System.out.println("5 - Consultar faturamento");
+        System.out.println("6 - Cadastrar hospede");
+        System.out.println("7 - Listar quartos");
         System.out.println("0 - Sair");
         System.out.print("Escolha uma opcao: ");
     }
@@ -41,9 +43,24 @@ public class ConsoleUI {
 
             switch (op) {
                 case 1:
-                    System.out.println("Cadastro de reserva ainda nao implementado.");
+                    System.out.println("Digite o ID do hospede:");
+                    int idHospede = entrada.nextInt();
+                    System.out.println("Digite o numero do quarto:");
+                    int numeroQuarto = entrada.nextInt();
+                    System.out.println("Digite a data de entrada:");
+                    String dataEntrada = entrada.next();
+                    System.out.println("Digite a data de saida:");
+                    String dataSaida = entrada.next();
+                    System.out.println("Digite a quantidade de ocupantes:");
+                    int quantidadeOcupantes = entrada.nextInt();
+                    System.out.println("Digite a quantidade de diarias:");
+                    int diarias = entrada.nextInt();
+                    try {
+                        hotelService.cadastrarReserva(idHospede, numeroQuarto, dataEntrada, dataSaida, quantidadeOcupantes, diarias);
+                    } catch (ValidacaoException e) {
+                        System.out.println(e.getMessage());
+                    }
                     break;
-
                 case 2:
                     hotelService.listarReservas();
                     break;
@@ -75,6 +92,24 @@ public class ConsoleUI {
                 case 0:
                     System.out.println("Encerrando o sistema");
                     break;
+
+                case 6:
+                    System.out.println("Digite o nome do hospede:");
+                    String nome = entrada.next();
+                    System.out.println("Digite o documento:");
+                    String documento = entrada.next();
+                    System.out.println("Digite o telefone:");
+                    String telefone = entrada.next();
+                    try {
+                    hotelService.cadastrarHospede(nome, documento, telefone);
+                    } catch (IllegalArgumentException e) {
+                    System.out.println(e.getMessage());
+                }
+                break;
+                
+                case 7:
+                hotelService.listarQuartos();
+                break;
 
                 default:
                     System.out.println("Opcao invalida!");

@@ -1,8 +1,9 @@
 package br.inatel.cdg.reserva;
 import br.inatel.cdg.hospede.Hospede;
 import br.inatel.cdg.quarto.Quarto;
+import java.io.Serializable;
 
-public class Reserva {
+public class Reserva implements Serializable {
 
     private int id;
     private Hospede hospede;
