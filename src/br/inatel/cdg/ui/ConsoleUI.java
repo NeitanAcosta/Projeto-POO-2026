@@ -45,18 +45,22 @@ public class ConsoleUI {
                 case 1:
                     System.out.println("Digite o ID do hospede:");
                     int idHospede = entrada.nextInt();
+
                     System.out.println("Digite o numero do quarto:");
                     int numeroQuarto = entrada.nextInt();
-                    System.out.println("Digite a data de entrada:");
+
+                    System.out.println("Digite a data de entrada (dd/MM/aaaa):");
                     String dataEntrada = entrada.next();
-                    System.out.println("Digite a data de saida:");
+
+                    System.out.println("Digite a data de saida (dd/MM/aaaa):");
                     String dataSaida = entrada.next();
+
                     System.out.println("Digite a quantidade de ocupantes:");
                     int quantidadeOcupantes = entrada.nextInt();
-                    System.out.println("Digite a quantidade de diarias:");
-                    int diarias = entrada.nextInt();
+
                     try {
-                        hotelService.cadastrarReserva(idHospede, numeroQuarto, dataEntrada, dataSaida, quantidadeOcupantes, diarias);
+                        hotelService.cadastrarReserva(idHospede, numeroQuarto,
+                                dataEntrada, dataSaida, quantidadeOcupantes);
                     } catch (ValidacaoException e) {
                         System.out.println(e.getMessage());
                     }

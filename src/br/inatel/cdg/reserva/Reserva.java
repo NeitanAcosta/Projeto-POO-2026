@@ -1,9 +1,13 @@
+
 package br.inatel.cdg.reserva;
+
 import br.inatel.cdg.hospede.Hospede;
 import br.inatel.cdg.quarto.Quarto;
 import java.io.Serializable;
 
 public class Reserva implements Serializable {
+
+    private static final long serialVersionUID = 8212948588317806864L;
 
     private int id;
     private Hospede hospede;
@@ -14,7 +18,9 @@ public class Reserva implements Serializable {
     private double valorTotal;
     private String status;
 
-    public Reserva(int id, Hospede hospede, Quarto quarto,String dataEntrada, String dataSaida,int quantidadeOcupantes) {
+    public Reserva(int id, Hospede hospede, Quarto quarto,
+                   String dataEntrada, String dataSaida, int quantidadeOcupantes) {
+
         this.id = id;
         this.hospede = hospede;
         this.quarto = quarto;
@@ -26,71 +32,46 @@ public class Reserva implements Serializable {
     }
 
     public void realizarCheckIn() {
-        this.status = "EM ESTADIA";
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public Hospede getHospede() {
-        return hospede;
-    }
-
-    public void setHospede(Hospede hospede) {
-        this.hospede = hospede;
-    }
-
-    public Quarto getQuarto() {
-        return quarto;
-    }
-
-    public void setQuarto(Quarto quarto) {
-        this.quarto = quarto;
-    }
-
-    public String getDataEntrada() {
-        return dataEntrada;
-    }
-
-    public void setDataEntrada(String dataEntrada) {
-        this.dataEntrada = dataEntrada;
-    }
-
-    public String getDataSaida() {
-        return dataSaida;
-    }
-
-    public void setDataSaida(String dataSaida) {
-        this.dataSaida = dataSaida;
-    }
-
-    public int getQuantidadeOcupantes() {
-        return quantidadeOcupantes;
-    }
-
-    public void setQuantidadeOcupantes(int quantidadeOcupantes) {
-        this.quantidadeOcupantes = quantidadeOcupantes;
-    }
-
-    public double getValorTotal() {
-        return valorTotal;
-    }
-
-    public void setValorTotal(double valorTotal) {
-        this.valorTotal = valorTotal;
-    }
-
-    public String getStatus() {
-        return status;
+        status = "EM ESTADIA";
     }
 
     public void setStatus(String status) {
         this.status = status;
     }
 
+    public void setValorTotal(double valorTotal) {
+        this.valorTotal = valorTotal;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public Hospede getHospede() {
+        return hospede;
+    }
+
+    public Quarto getQuarto() {
+        return quarto;
+    }
+
+    public String getDataEntrada() {
+        return dataEntrada;
+    }
+
+    public String getDataSaida() {
+        return dataSaida;
+    }
+
+    public int getQuantidadeOcupantes() {
+        return quantidadeOcupantes;
+    }
+
+    public double getValorTotal() {
+        return valorTotal;
+    }
+
+    public String getStatus() {
+        return status;
+    }
 }
