@@ -1,5 +1,4 @@
 package br.inatel.cdg.persistencia;
-import br.inatel.cdg.persistencia.PersistenciaException;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
