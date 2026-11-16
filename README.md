@@ -2,7 +2,7 @@
 
 **Projeto final da disciplina de Programação Orientada a Objetos (C06) — Inatel, 2026**  
 **Professor:** Christopher Lima  
-**Integrantes:** Nathan e Giron
+**Integrantes:** Nathan e Gustavo Giron
 
 ## 📖 Sobre o projeto
 
