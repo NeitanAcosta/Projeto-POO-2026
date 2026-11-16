@@ -112,14 +112,6 @@ Após adicionar os arquivos à pasta `docs/uml/`, consulte:
 - [Main, console e serviços](docs/uml/03_Main_ConsoleUI_HotelService.png)
 - [Persistência e exceções](docs/uml/04_Arquivos_Excecoes.png)
 
-## 👥 Divisão de responsabilidades
-
-**Nathan — Modelagem e persistência:** desenvolvimento e revisão das classes de hóspedes, quartos e suas especializações, interface de precificação, estrutura de armazenamento e leitura/escrita de arquivos.
-
-**Giron — Reservas e execução:** desenvolvimento e revisão das classes de reserva, regras de negócio, interação com o usuário, exceções relacionadas às reservas e inicialização da aplicação.
-
-A integração dos módulos, as correções finais e a preparação da documentação foram atividades compartilhadas pela dupla.
-
 ## 🤖 Declaração de uso de Inteligência Artificial
 
 **O grupo utilizou inteligência artificial?** Sim.
