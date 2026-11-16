@@ -2,7 +2,7 @@
 
 **Projeto final da disciplina de Programação Orientada a Objetos (C06) — Inatel, 2026**  
 **Professor:** Christopher Lima  
-**Integrantes:** Nathan e Gustavo Giron
+**Integrantes:** Nathan Arruola da Costa e Gustavo Giron
 
 ## 📖 Sobre o projeto
 
@@ -101,16 +101,27 @@ Os cadastros e as reservas são mantidos em memória por `HotelData` e gravados 
 
 Essa abordagem atende ao requisito de **leitura e escrita de arquivos**, sem a necessidade de banco de dados. O arquivo `.dat` é um arquivo binário de objetos Java e não foi projetado para edição manual.
 
+
 ## 📐 Diagrama UML
 
-Os diagramas de classes representam os atributos, métodos e relacionamentos do projeto, incluindo herança, implementação de interface, associações e dependências.
+Os diagramas abaixo representam as classes, atributos,
+métodos e relacionamentos do sistema HotelStay.
 
-Após adicionar os arquivos à pasta `docs/uml/`, consulte:
+### 1. Quartos, Herança e Interface
 
-- [Quartos, herança e interface](docs/uml/01_Quartos_Heranca_Interface.png)
-- [Hóspedes, reservas e dados](docs/uml/02_Hospede_Reserva_HotelData.png)
-- [Main, console e serviços](docs/uml/03_Main_ConsoleUI_HotelService.png)
-- [Persistência e exceções](docs/uml/04_Arquivos_Excecoes.png)
+![UML Quartos](docs/uml/01_Quartos_Heranca_Interface.png)
+
+### 2. Hóspedes, Reservas e HotelData
+
+![UML Reservas](docs/uml/02_Hospede_Reserva_HotelData.png)
+
+### 3. Main, ConsoleUI e HotelService
+
+![UML Serviços](docs/uml/03_Main_ConsoleUI_HotelService.png)
+
+### 4. Persistência e Exceções
+
+![UML Persistência](docs/uml/04_Arquivos_Excecoes.png)
 
 ## 🤖 Declaração de uso de Inteligência Artificial
 
