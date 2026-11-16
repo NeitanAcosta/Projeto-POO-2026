@@ -111,12 +111,18 @@ public class HotelService {
     }
 
     public void listarQuartos() {
+    if (dados.getTotalQuartos() == 0) {
+        System.out.println("Nenhum quarto cadastrado!");
+    } else {
         for (int i = 0; i < dados.getTotalQuartos(); i++) {
-            Quarto quarto = dados.getQuartos()[i];
-            System.out.println("Quarto " + quarto.getNumero() + " - "
-                    + quarto.getClass().getSimpleName() + " - R$ " + quarto.getValorBase());
+            System.out.println("----------------------");
+            System.out.println("Numero: " + dados.getQuartos()[i].getNumero());
+            System.out.println("Capacidade: " + dados.getQuartos()[i].getCapacidade() + " pessoas");
+            System.out.println("Valor base: R$ " + dados.getQuartos()[i].getValorBase());
+            System.out.println("Tipo: " + dados.getQuartos()[i].getClass().getSimpleName());
         }
     }
+}
 
     public void listarReservas() {
         if (dados.getTotalReservas() == 0) System.out.println("Nenhuma reserva cadastrada.");
