@@ -1,6 +1,4 @@
-
 package br.inatel.cdg.reserva;
-
 import br.inatel.cdg.hospede.Hospede;
 import br.inatel.cdg.quarto.Quarto;
 import java.io.Serializable;

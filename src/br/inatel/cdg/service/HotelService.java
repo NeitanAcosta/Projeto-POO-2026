@@ -1,11 +1,9 @@
 package br.inatel.cdg.service;
-
 import br.inatel.cdg.Exception.*;
 import br.inatel.cdg.hospede.*;
 import br.inatel.cdg.persistencia.*;
 import br.inatel.cdg.quarto.*;
 import br.inatel.cdg.reserva.*;
-
 import java.time.*;
 import java.time.format.*;
 import java.time.temporal.*;
@@ -17,8 +15,6 @@ public class HotelService {
     public HotelService() {
         persistencia = new PersistenciaArquivo();
         dados = persistencia.carregar();
-
-        // Dados de exemplo para testar o sistema.
         if (dados.getTotalHospedes() == 0) {
             cadastrarHospede("Joao Silva", "123456789", "11999999999");
             cadastrarHospede("Maria Souza", "987654321", "11988888888");
