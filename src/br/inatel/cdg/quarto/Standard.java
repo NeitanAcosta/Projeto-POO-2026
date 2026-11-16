@@ -1,5 +1,4 @@
 package br.inatel.cdg.quarto;
-
 public class Standard extends Quarto {
 
     public Standard(int numero, int capacidade, double valorBase) {

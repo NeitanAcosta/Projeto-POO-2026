@@ -1,5 +1,4 @@
 package br.inatel.cdg.persistencia;
-
 import br.inatel.cdg.hospede.Hospede;
 import br.inatel.cdg.quarto.Quarto;
 import br.inatel.cdg.reserva.Reserva;

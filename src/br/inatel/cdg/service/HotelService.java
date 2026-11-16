@@ -61,7 +61,6 @@ public class HotelService {
         return null;
     }
 
-    // Converte textos como 15/11/2026 em datas validas.
     private LocalDate lerData(String texto) throws ValidacaoException {
         try {
             if (texto != null && texto.contains("-")) return LocalDate.parse(texto);

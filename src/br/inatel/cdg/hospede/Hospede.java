@@ -1,5 +1,4 @@
 package br.inatel.cdg.hospede;
-
 import java.io.Serializable;
 
 public class Hospede implements Serializable {

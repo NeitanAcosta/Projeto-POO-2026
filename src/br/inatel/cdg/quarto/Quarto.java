@@ -1,5 +1,4 @@
 package br.inatel.cdg.quarto;
-
 import java.io.Serializable;
 
 public abstract class Quarto implements Precificavel, Serializable {

@@ -1,5 +1,4 @@
 package br.inatel.cdg.quarto;
-
 public class Luxo extends Quarto {
 
     public Luxo(int numero, int capacidade, double valorBase) {
