@@ -26,7 +26,7 @@ O objetivo acadêmico é aplicar os principais conceitos de **Programação Orie
 ## 💻 Tecnologias utilizadas
 
 - **Java 17 ou superior**.
-- **IntelliJ IDEA** como ambiente de desenvolvimento.
+- **IntelliJ IDEA && VSCODE IDEA** como ambiente de desenvolvimento.
 - **Console** para interação com o usuário.
 - **Arrays** para armazenar hóspedes, quartos e reservas em memória.
 - **`java.io`** (`Serializable`, `ObjectOutputStream` e `ObjectInputStream`) para persistência em arquivo.
